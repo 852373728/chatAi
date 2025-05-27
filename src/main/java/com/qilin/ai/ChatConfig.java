@@ -15,12 +15,20 @@ public class ChatConfig {
         return MessageWindowChatMemory.withMaxMessages(10);
     }
 
-    @Bean
+    @Bean("chatMemoryProvider")
     public ChatMemoryProvider chatMemoryProvider(MongoChatMemoryStore mongoChatMemoryStore){
         return chatMemoryId -> MessageWindowChatMemory
                 .builder()
                 .id(chatMemoryId).chatMemoryStore(mongoChatMemoryStore)
-                .maxMessages(10).build();
+                .maxMessages(20).build();
+    }
+
+    @Bean("xiaozhichatMemoryProvider")
+    public ChatMemoryProvider xiaozhichatMemoryProvider(MongoChatMemoryStore mongoChatMemoryStore){
+        return chatMemoryId -> MessageWindowChatMemory
+                .builder()
+                .id(chatMemoryId).chatMemoryStore(mongoChatMemoryStore)
+                .maxMessages(20).build();
     }
 
 }

@@ -3,6 +3,8 @@ package com.qilin;
 import com.qilin.ai.Assistant;
 import com.qilin.ai.QuarantineChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import dev.langchain4j.service.AiServices;
+import dev.langchain4j.service.spring.AiService;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,6 +43,15 @@ public class T2 {
     @Test
     public void te3() {
         String result = quarantineChatMemory.chat("1", "你现在还记得我是谁吗？");
+        System.out.println(result);
+
+
+
+    }
+
+    @Test
+    public void te4() {
+        String result = quarantineChatMemory.chatPolicy("teacher", "我要给学生讲解政策是怎么对企业产生影响的？给我准备一份大概的演讲稿","教师");
         System.out.println(result);
 
 
