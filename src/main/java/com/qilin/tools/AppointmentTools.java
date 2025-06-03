@@ -4,6 +4,7 @@ import com.qilin.entity.Appointment;
 import com.qilin.service.AppointmentService;
 import dev.langchain4j.agent.tool.P;
 import dev.langchain4j.agent.tool.Tool;
+import dev.langchain4j.store.embedding.EmbeddingStore;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 

@@ -31,4 +31,12 @@ public class ChatConfig {
                 .maxMessages(20).build();
     }
 
+    @Bean("policyMemoryProvider")
+    public ChatMemoryProvider policyMemoryProvider(MongoChatMemoryStore mongoChatMemoryStore){
+        return chatMemoryId -> MessageWindowChatMemory
+                .builder()
+                .id(chatMemoryId).chatMemoryStore(mongoChatMemoryStore)
+                .maxMessages(30).build();
+    }
+
 }

@@ -3,9 +3,16 @@ server:
 langchain4j:
   community:
     dashscope:
+      streaming-chat-model:
+        api-key: sk-8d939d076c03404b91b075d6dc7a976a
+        model-name: qwen-plus-latest
       chat-model:
         api-key: sk-8d939d076c03404b91b075d6dc7a976a
         model-name: qwen-plus-latest
+#      embedding-model:
+#        api-key: sk-8d939d076c03404b91b075d6dc7a976a
+#        model-name: text-embedding-v3
+     #   base-url: https://dashscope.aliyuncs.com/api/v1/services/embeddings/multimodal-embedding/multimodal-embedding
 
 #  open-ai:
 #    chat-model:
